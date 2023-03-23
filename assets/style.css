@@ -3,3 +3,14 @@
     or 
     colors: light green, pink, white, orange
     fonts: */
+
+    @media screen and (max-width:992px) {
+        /* for medium devices */
+    }
+
+    @media screen and (max-width: 768px){
+        /* small devices */
+    }
+
+   
+    
