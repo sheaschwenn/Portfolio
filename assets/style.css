@@ -12,10 +12,11 @@
 /* turning the header into a flex container and elements have space between */
     header{
         display:flex;
+        flex-wrap:wrap ;
         justify-content: space-between;
         background-color: #77a861;
-        height:100px;
-        align-items: center;
+        height: 100px;
+        align-content: center;
     }
 
     h1{
@@ -26,6 +27,7 @@
 /* turning my nav bar into a flex container with even spacing */
     nav ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         min-width: 400px; 
         
@@ -37,29 +39,44 @@
     }
 /* setting size and margins for main photo */
     #profile-pic{
-        display: block;
+        display: inline;
         max-width: 50%;
-        margin: 20px auto 20px auto;
+        margin: 20px;
     }
+    /* #about{
+        float: right;
+    } */
 
 
-/* making the first webapp in my portfolio a flex item */
-/* TODO fix size, make so that it is 2x the size of the other apps think about changing the pic to be horizontal/cropping image  */
-    #first-app{
+/* making the portfolio container a flex container */
+    #portfolio{
         display: flex;
-        flex:2 1 400px;
+        flex-wrap: wrap;
+        justify-content: center;
+       
+}
+/* making the first webapp in my portfolio a flex item */
+/* TODO fix size, make so that it is 2x the size of the other apps   */
+/* TODO center on page */
+    #first-app img{
+        flex:2 1 100px;
         max-width: 50%;
+        border-radius: 4%;
+        margin-left: auto;
+        margin-right: auto;
     }
 /* flex wrap needs to be in container not this class  */
-    .app{
-        display:flex;
-        flex-wrap: wrap;
-        border-radius: 4%;
+/* TODO fix flex elements */
+    .app {
+        flex: 1 0 0;
+        padding: 1%;
+       
     }
-
-    img.app {
-        max-width: 25%;
-        display:flex;
+    .app img{
+        flex: 1 1 100px;
+        border-radius: 4%;
+        max-width: 100%;
+        min-width: 400px;
     }
    /*the begginings of the screen adjustment  */
     @media screen and (max-width:992px) {
