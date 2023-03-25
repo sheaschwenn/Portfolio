@@ -68,43 +68,62 @@
         margin-top: 5%;
     } 
     h2{
-        text-align: center;
+        display: block;
+        margin-top: -20px;
     }
-
+    /* main{
+        display: flex;
+        flex-wrap: wrap;
+    } */
 
 /* making the portfolio container a flex container */
    #portfolio{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        text-align: center;
+        justify-content: space-between;
     }
 /* making the first webapp in my portfolio a flex item */
 /* TODO fix size, make so that it is 2x the size of the other apps   */
 /* TODO center on page */
-    #first-app{
-        display: inline;
-        flex:2 1 0;
-        min-width: 45%;
+    .first-app{
+        /* display: inline; */
+        flex: 2 1 0;
+        width: 50%;
+        height: auto;
         border-radius: 4%;
+        
+        /* overflow: hidden; */
         /* margin-left: auto;
         margin-right: auto; */
-        justify-items: center;
+        
     }
 /* flex wrap needs to be in container not this class  */
 /* TODO fix flex elements */
     .app {
-        display: inline;
-        flex: 1 0 0;
-        padding: 1%;
-       
+        /* display: inline; */
+        width: 50%;
+        
+
     }
+
     .app img{
         flex: 1 1 0;
+        max-width:100% ;  
+        /* min-width: 25%; */
+        border-radius: 10%; 
+        padding: 5px;
+    }
+    /* .other{
+        float: right
+    } */
+    
+        /* padding: 1%;
         border-radius: 4%;
         max-width:100% ;  
         min-width: 25%;
         float:right;
-        /* min-width: 400px; */
+        min-width: 400px;  */
     }
    /*the begginings of the screen adjustment  */
     @media screen and (max-width:992px) {
