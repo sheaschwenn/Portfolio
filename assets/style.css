@@ -98,6 +98,7 @@
 /* width of the app container */
     .app {
         display: flex;
+        flex-wrap: wrap;
         width: 68%;
         height: auto;
 
@@ -131,7 +132,21 @@
    /*the beginnings of the screen adjustment  */
     @media screen and (max-width:992px) {
         /* for medium devices */
-    }
+        
+        #first-app{
+            width:100%;
+        }
+        .app{
+            width:100%;
+    
+            }
+        .side{
+            width:50%;
+            }
+        .other{
+            width:50%;
+        }
+        }
 
     @media screen and (max-width: 768px){
         /* small devices */
@@ -139,7 +154,18 @@
         nav{
             flex-direction: column;
         }
-    }
+
+      
+        .app{
+            width:100%;
+            }
+        .side{
+            width:100%;
+            }
+        .other{
+            width:100%;
+        }
+        }
 
    
     
