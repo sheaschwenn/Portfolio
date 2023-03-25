@@ -57,9 +57,9 @@
         margin-top: 30px;
     }
     #profile-pic{
-        display: inline;
-        width: 40%;
-        margin: 20px;
+        /* display: inline; */
+        width: 35%;
+        margin: 15px;
     }
     #about{
         float: right;
@@ -132,6 +132,7 @@
    /*the beginnings of the screen adjustment  */
     @media screen and (max-width:992px) {
         /* for medium devices */
+        /* first app and next two will split the screen evenly  */
         
         #first-app{
             width:100%;
@@ -150,6 +151,7 @@
 
     @media screen and (max-width: 768px){
         /* small devices */
+        /* each app will take up its own row */
         main,
         nav{
             flex-direction: column;
