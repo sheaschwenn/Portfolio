@@ -70,6 +70,7 @@
     h2{
         display: block;
         margin-top: -20px;
+        text-align: center;
     }
     /* main{
         display: flex;
@@ -82,50 +83,52 @@
         flex-wrap: wrap;
         text-align: center;
         justify-content: space-between;
+        margin: 30px;
     }
 /* making the first webapp in my portfolio a flex item */
-/* TODO fix size, make so that it is 2x the size of the other apps   */
-/* TODO center on page */
+
     .first-app{
-        /* display: inline; */
         flex: 2 1 0;
-        width: 50%;
+        width: 33%;
         height: auto;
         border-radius: 4%;
         
-        /* overflow: hidden; */
-        /* margin-left: auto;
-        margin-right: auto; */
-        
     }
 /* flex wrap needs to be in container not this class  */
-/* TODO fix flex elements */
+/* width of the app container */
     .app {
-        /* display: inline; */
-        width: 50%;
-        
+        display: flex;
+        width: 68%;
+        height: auto;
 
     }
-
+/* sets the styling of the images with class app  */
     .app img{
         flex: 1 1 0;
-        max-width:100% ;  
-        /* min-width: 25%; */
+        max-width:100% ; 
+        height: auto; 
         border-radius: 10%; 
         padding: 5px;
     }
-    /* .other{
-        float: right
-    } */
-    
-        /* padding: 1%;
-        border-radius: 4%;
-        max-width:100% ;  
-        min-width: 25%;
-        float:right;
-        min-width: 400px;  */
+/* width of the section with class side  */
+    .side{
+        width: 50%;
+
     }
-   /*the begginings of the screen adjustment  */
+    .side img{
+        width: 100%;
+    }
+/* sets width of the section with class other */
+    .other{
+        width: 50%;
+    }
+    .other img{
+        width: 100%;
+    } 
+   
+
+    
+   /*the beginnings of the screen adjustment  */
     @media screen and (max-width:992px) {
         /* for medium devices */
     }
