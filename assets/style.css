@@ -3,80 +3,108 @@
     or 
     colors: light green, pink, white, orange
     fonts: */
+:root{
 
+}
     body{
         /* display:flex;
-       
-        flex-direction: column; */
+        background-image: linear-gradient(var(--primary) ,var(--secondary));
+       /* potential for a gradient here  */
+        /* flex-direction: column; */ 
+        /* background:#686e24;
+        background: radial-gradient(circle, #686e24 0%, white 100%); */
+        /* background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+        /* background: rgb(238,174,202);
+        background: radial-gradient(circle, #B8860B 0%, white 100%); */
     }
 /* turning the header into a flex container and elements have space between */
     header{
         display:flex;
         flex-wrap:wrap ;
         justify-content: space-between;
-        background-color: #77a861;
-        height: 100px;
+        /* background-color: #77a861; */
+        /* background-color: #686e24; */
+        /* height: 100px; */
         align-content: center;
+        
     }
 
     h1{
         font-size: 200%;
         margin-left: 20px;
-        color: white;
+        color: #686e24;
+        margin-top: 25px;
     }
 /* turning my nav bar into a flex container with even spacing */
     nav ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        margin-top: 25px;
+       
         min-width: 400px; 
         
     }
     /* takes away the lines from under the menu elements */
     a{
         text-decoration: none;
-        color: white;
+        /* color: white; */
     }
-/* setting size and margins for main photo */
+/* making the section me into a flex contaner, containts about me and profile pic */
+    section.me{
+        display: flex; 
+        margin-top: 30px;
+    }
     #profile-pic{
         display: inline;
-        max-width: 50%;
+        width: 40%;
         margin: 20px;
     }
-    /* #about{
+    #about{
         float: right;
-    } */
+        display: inline;
+        margin-left: 5%;
+        margin-top: 5%;
+    } 
+    h2{
+        text-align: center;
+    }
 
 
 /* making the portfolio container a flex container */
-    #portfolio{
+   #portfolio{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-       
-}
+    }
 /* making the first webapp in my portfolio a flex item */
 /* TODO fix size, make so that it is 2x the size of the other apps   */
 /* TODO center on page */
-    #first-app img{
-        flex:2 1 100px;
-        max-width: 50%;
+    #first-app{
+        display: inline;
+        flex:2 1 0;
+        min-width: 45%;
         border-radius: 4%;
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
+        justify-items: center;
     }
 /* flex wrap needs to be in container not this class  */
 /* TODO fix flex elements */
     .app {
+        display: inline;
         flex: 1 0 0;
         padding: 1%;
        
     }
     .app img{
-        flex: 1 1 100px;
+        flex: 1 1 0;
         border-radius: 4%;
-        max-width: 100%;
-        min-width: 400px;
+        max-width:100% ;  
+        min-width: 25%;
+        float:right;
+        /* min-width: 400px; */
     }
    /*the begginings of the screen adjustment  */
     @media screen and (max-width:992px) {
@@ -85,6 +113,10 @@
 
     @media screen and (max-width: 768px){
         /* small devices */
+        main,
+        nav{
+            flex-direction: column;
+        }
     }
 
    
