@@ -4,13 +4,14 @@
     colors: light green, pink, white, orange
     fonts: */
 :root{
-    --color-background:brown;
-    --color-header: green;
+    --color-background:white;
+    --color-header: #817c20;
     --color-text: black;
-    --font-h1: ;
-    --font-h2:;
-    --font-body:;
-    --font-button:;
+    --color-button: #817c20;
+    --font-h1: "Roboto Slab";
+    --font-h2:"Roboto Slab";
+    --font-body:sans-serif;
+    --font-button:"Roboto";
 
 }
     body{
@@ -31,39 +32,54 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-end;
-        font-family: var(--font-h1);
-        color: var(--color-header);
+        margin-top: 4%;
 
         
     }
 
     h1{
-        font-size: 200%;
-        margin-left: 20px;
+        font-family: var(--font-h1);
+        font-size: 350%;
         color: #686e24;
-        margin-top: 25px;
     }
-/* turning my nav bar into a flex container with even spacing */
+    h2{
+        font-family: var(--font-h2);
+        text-align: center;
+        font-size: 250%;
+
+    }
+    h3{
+        font-family: var(--font-h2);
+    }
+    
+/* choosing how much of the header the nav bar takes up spacing */
     nav{
         width: 30%;
       
 
     }
-    
+    /* turning the ul into a flex container so that the li items can become flex items  */
     ul {
         display: flex;
         
         
     }
+    /* splitting up ul evenly between each li item  */
     li{
         width: 33%;
         text-align: center;
+       }
 
-    } 
-    /* takes away the lines from under the menu elements */
+    
+    /* takes away the lines from under the any anchor tag elements */
     a{
         text-decoration: none;
-        /* color: white; */
+        color: var(--color-button);
+        font-family:var(--font-button) ;
+    }
+/* whenever user is hovering over a link it will go bold */
+    a:hover{
+        font-weight: bolder;
     }
 /* making the section me into a flex contaner, containts about me and profile pic */
     section.me{
@@ -71,10 +87,12 @@
         margin-top: 30px;
     }
     #profile-pic{
-        /* display: inline; */
+        
         width: 35%;
         margin: 15px;
     }
+
+    /* putting the about me to the right of profile picture */
     #about{
         float: right;
         display: inline;
@@ -84,17 +102,9 @@
         padding-left: 10%;
         padding-right:10%;
     } 
-    h2{
-        
-        text-align: center;
+   
 
-    }
-    /* main{
-        display: flex;
-        flex-wrap: wrap;
-    } */
-
-/* making the portfolio container a flex container */
+/* making the all apps container a flex container */
    .all-apps{
         display: flex;
         flex-wrap: wrap;
@@ -102,7 +112,7 @@
         justify-content: space-between;
         margin: 30px;
    }
-/* making the first webapp in my portfolio a flex item */
+/* making the first webapp larger than the other four, takes up one third of the all apps container */
 
     .first-app{
         flex: 2 1 0;
@@ -111,8 +121,7 @@
         border-radius: 4%;
         
     }
-/* flex wrap needs to be in container not this class  */
-/* width of the app container */
+/* mading the app container a flex container so my web apps can flow next to one another, takes up 68% of the all apps conainer width */
     .app {
         display: flex;
         flex-wrap: wrap;
@@ -128,7 +137,7 @@
         border-radius: 10%; 
         padding: 5px;
     }
-/* width of the section with class side  */
+/* width of the app section with class side  */
     .side{
         width: 50%;
 
@@ -136,14 +145,15 @@
     .side img{
         width: 100%;
     }
-/* sets width of the section with class other */
+/* sets width of the app section with class other */
     .other{
         width: 50%;
     }
     .other img{
         width: 100%;
     } 
-
+/* creating buttons for my contact info */
+/* turning the buttons container into a flext container  */
     .buttons {
         display: flex;
         justify-content: space-around;
@@ -152,40 +162,49 @@
         text-align: center;
     }
 
-
+/*setting up the styling of the buttons and creating a fade out effect*/
    button{
     aspect-ratio:3/1 ;
     width: 20%;
     margin-bottom: 5%;
-    border:solid green 5px;
+    border:solid var(--color-button) 5px;
     border-radius: 5%;
-    background: white;
-    transition:background 1s ease-out,color 1s ease-out, border 1s ease-out;
+    background: var(--color-background);
+    transition:background .7s ease-out,color .7s ease-out, border .7s ease-out;
+    font-family: var(--font-button);
    
    }
    button a{
-    color:green;
-   }
-   button:focus{
-    outline:none;
+    color:var(--color-button);
    }
 
+/* styling for when user hovers over the button */
     button:hover {
-        background: #E00462;
-        color: #fff;
+        background: var(--color-button);
+        color: var(--color-background);
         border: none;
     }
 
     button a:hover{
-        color: white;
+        color: var(--color-background);
     }
 
     
-   /*the beginnings of the screen adjustment  */
+   /*screen size adjustments   */
     @media screen and (max-width:992px) {
         /* for medium devices */
-        /* first app and next two will split the screen evenly  */
         
+        /* navigation bar will drop below my name to create more space */
+        nav{
+            width: 100%;
+            margin-top: 1%;
+            
+        }
+        ul{
+            justify-content: space-evenly;
+        }
+
+        /* first app and next four will split the screen evenly  */
         #first-app{
             width:100%;
         }
@@ -204,12 +223,17 @@
     @media screen and (max-width: 768px){
         /* small devices */
         /* each app will take up its own row */
-        main,
-        nav{
-            flex-direction: column;
+        /* change the header font size to fit */
+        h1{
+            font-size: 200%;
         }
+        /* changing the font size to look right on a smaller screen  */
+        h2{
+            font-size: 100%;
+        }
+        
 
-      
+      /* all apps will now take up their own row instead of sharing  */
         .app{
             width:100%;
             }
