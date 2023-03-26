@@ -50,45 +50,47 @@
         <main>
             <!-- portfolio items, created clickable images to take to youtube/outside website -->
             <!-- added the image inside of the anchor tag so that the image was clickable, also added the text inside as well so that will hopefull be clickable too -->
-            <h2>Portfolio</h2>
+            
             <section id="portfolio">
-                <!-- setting the class for the biggest images separate, also including it in the general app class -->
-                <section class="first-app app">
-                    <a href="https://www.youtube.com/watch?v=hSofzQURQDk&ab_channel=TheFoundations">
-                        <img src="./images/app-pic.JPG"alt="coastline"/>
-                        <h3>Biggest and Biggest</h3>
-                    </a>
-                </section>
-
-                <!-- setting all other apps in the app class -->
-                <section class="app">
-                    <!-- putting two apps into their own container so things will flow next to oneanother -->
-                    <section class="side">
-                
-                        <a href="https://open.spotify.com/track/5gS8whHdcpbkdz0qonQZF8?autoplay=true">
-                            <img src="./images/devs-stairs.JPG"alt="close up of sand"/>
-                            <h3>Going Places Fast</h3>
-                        </a>
-                
-                
-                        <a href="https://open.spotify.com/album/1E6aIrYOcysBusmGfm2Pcm">
-                            <img src="./images/gals-boards.JPG"alt="women walking with surfboards"/>
-                            <h3>Boom</h3>
+                <h2>Portfolio</h2>
+                <section class = all-apps>
+                    <!-- setting the class for the biggest images separate, also including it in the general app class -->
+                    <section class="first-app app">
+                        <a href="https://www.youtube.com/watch?v=hSofzQURQDk&ab_channel=TheFoundations">
+                            <img src="./images/app-pic.JPG"alt="coastline"/>
+                            <h3>Biggest and Biggest</h3>
                         </a>
                     </section>
-                    <!-- putting other two apps into their own container so images will flow next to one another -->
-                    <section class="other">
+
+                    <!-- setting all other apps in the app class -->
+                    <section class="app">
+                    <!-- putting two apps into their own container so things will flow next to oneanother -->
+                        <section class="side">
+                            <a href="https://open.spotify.com/track/5gS8whHdcpbkdz0qonQZF8?autoplay=true">
+                                    <img src="./images/devs-stairs.JPG"alt="close up of sand"/>
+                                 <h3>Going Places Fast</h3>
+                             </a>
                 
-                        <a href="https://www.youtube.com/watch?v=RmY1TJ6B-0g&ab_channel=MsCharlieBrown78%28CharlieRae%29">
-                            <img src="./images/pebble-beach.JPG"alt="pebbles on the beach"/>
-                            <h3>Big Things</h3>
-                        </a>
+                
+                             <a href="https://open.spotify.com/album/1E6aIrYOcysBusmGfm2Pcm">
+                                <img src="./images/gals-boards.JPG"alt="women walking with surfboards"/>
+                                <h3>Boom</h3>
+                             </a>
+                        </section>
+                         <!-- putting other two apps into their own container so images will flow next to one another -->
+                        <section class="other">
+                
+                            <a href="https://www.youtube.com/watch?v=RmY1TJ6B-0g&ab_channel=MsCharlieBrown78%28CharlieRae%29">
+                                    <img src="./images/pebble-beach.JPG"alt="pebbles on the beach"/>
+                                <h3>Big Things</h3>
+                             </a>
                     
                     
-                        <a href="https://www.youtube.com/watch?v=arxhW1RgDDo&ab_channel=lee57">
-                            <img src="./images/palm.jpeg"alt="palm tree "alt=/>
-                            <h3>Coming Soon</h3>
-                        </a>
+                            <a href="https://www.youtube.com/watch?v=arxhW1RgDDo&ab_channel=lee57">
+                                <img src="./images/palm.jpeg"alt="palm tree "alt=/>
+                                <h3>Coming Soon</h3>
+                            </a>
+                        </section>
                     </section>
                 </section>
                 
@@ -97,12 +99,15 @@
             <!-- contact space where I added buttons for email, linked in and git hub -->
             <!-- added the link to the different sites inside of the button element -->
             <!-- TODO change email address -->
-            <h2>Contact</h2>
+            
             <section id="contact">
-                
-                <button type="button" ><a href="mailto:sunroomthelabel@gmail.com"> Email</a></button>
-                <button type="button" ><a href="https://www.linkedin.com/in/shea-schwennicke-76a378210/"> LinkedIn</a></button>
-                <button type="button" ><a href="https://github.com/sheaschwenn"> Github</a></button>
+                <h2>Contact</h2>
+                <!-- have to create another section so that the contact will not become a flex item -->
+                <section class="buttons">
+                    <button type="button" ><a href="mailto:sunroomthelabel@gmail.com"> Email</a></button>
+                    <button type="button" ><a href="https://www.linkedin.com/in/shea-schwennicke-76a378210/"> LinkedIn</a></button>
+                    <button type="button" ><a href="https://github.com/sheaschwenn"> Github</a></button>
+                </section>
             </section>
         </main>
     </body>

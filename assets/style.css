@@ -4,6 +4,13 @@
     colors: light green, pink, white, orange
     fonts: */
 :root{
+    --color-background:brown;
+    --color-header: green;
+    --color-text: black;
+    --font-h1: ;
+    --font-h2:;
+    --font-body:;
+    --font-button:;
 
 }
     body{
@@ -20,13 +27,13 @@
     }
 /* turning the header into a flex container and elements have space between */
     header{
-        display:flex;
-        flex-wrap:wrap ;
-        justify-content: space-between;
-        /* background-color: #77a861; */
-        /* background-color: #686e24; */
-        /* height: 100px; */
-        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-family: var(--font-h1);
+        color: var(--color-header);
+
         
     }
 
@@ -37,15 +44,22 @@
         margin-top: 25px;
     }
 /* turning my nav bar into a flex container with even spacing */
-    nav ul {
+    nav{
+        width: 30%;
+      
+
+    }
+    
+    ul {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin-top: 25px;
-       
-        min-width: 400px; 
+        
         
     }
+    li{
+        width: 33%;
+        text-align: center;
+
+    } 
     /* takes away the lines from under the menu elements */
     a{
         text-decoration: none;
@@ -66,11 +80,14 @@
         display: inline;
         margin-left: 5%;
         margin-top: 5%;
+        width:60%;
+        padding-left: 10%;
+        padding-right:10%;
     } 
     h2{
-        display: block;
-        margin-top: -20px;
+        
         text-align: center;
+
     }
     /* main{
         display: flex;
@@ -78,13 +95,13 @@
     } */
 
 /* making the portfolio container a flex container */
-   #portfolio{
+   .all-apps{
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         justify-content: space-between;
         margin: 30px;
-    }
+   }
 /* making the first webapp in my portfolio a flex item */
 
     .first-app{
@@ -126,7 +143,42 @@
     .other img{
         width: 100%;
     } 
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 5%;
+        text-align: center;
+    }
+
+
+   button{
+    aspect-ratio:3/1 ;
+    width: 20%;
+    margin-bottom: 5%;
+    border:solid green 5px;
+    border-radius: 5%;
+    background: white;
+    transition:background 1s ease-out,color 1s ease-out, border 1s ease-out;
    
+   }
+   button a{
+    color:green;
+   }
+   button:focus{
+    outline:none;
+   }
+
+    button:hover {
+        background: #E00462;
+        color: #fff;
+        border: none;
+    }
+
+    button a:hover{
+        color: white;
+    }
 
     
    /*the beginnings of the screen adjustment  */
