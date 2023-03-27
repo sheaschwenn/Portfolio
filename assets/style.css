@@ -4,10 +4,11 @@
     colors: light green, pink, white, orange
     fonts: */
 :root{
-    --color-background:white;
-    --color-header: #817c20;
-    --color-text: black;
-    --color-button: #817c20;
+    --color-background:rgb(255, 251, 238);
+    --color-header: #5a4911;
+    --color-text: #a59f2a;
+    /* rgb(116, 59, 18); */
+    --color-button: #5a4911;
     --font-h1: "Roboto Slab";
     --font-h2:"Roboto Slab";
     --font-body:sans-serif;
@@ -19,12 +20,13 @@
         background-image: linear-gradient(var(--primary) ,var(--secondary));
        /* potential for a gradient here  */
         /* flex-direction: column; */ 
-        /* background:#686e24;
-        background: radial-gradient(circle, #686e24 0%, white 100%); */
-        /* background: rgb(238,174,202);
-        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+        /* background:#686e24;*/
+        /* background: radial-gradient(circle, cornsilk 0%, white 100%);  */
+        /* background: rgb(238,174,202);*/
+        /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
         /* background: rgb(238,174,202);
         background: radial-gradient(circle, #B8860B 0%, white 100%); */
+        background:var(--color-background);
     }
 /* turning the header into a flex container and elements have space between */
     header{
@@ -40,16 +42,20 @@
     h1{
         font-family: var(--font-h1);
         font-size: 350%;
-        color: #686e24;
+        color: var(--color-header);
     }
     h2{
         font-family: var(--font-h2);
         text-align: center;
         font-size: 250%;
+        color:var(--color-text)
 
     }
     h3{
         font-family: var(--font-h2);
+    }
+    p{
+        color: var(--color-header);
     }
     
 /* choosing how much of the header the nav bar takes up spacing */
@@ -69,17 +75,22 @@
         width: 33%;
         text-align: center;
        }
-
+   
     
     /* takes away the lines from under the any anchor tag elements */
     a{
         text-decoration: none;
         color: var(--color-button);
         font-family:var(--font-button) ;
+        font-size: x-large;
+        
+        
+        
     }
 /* whenever user is hovering over a link it will go bold */
     a:hover{
         font-weight: bolder;
+        
     }
 /* making the section me into a flex contaner, containts about me and profile pic */
     section.me{
@@ -102,7 +113,9 @@
         padding-left: 10%;
         padding-right:10%;
     } 
-   
+   #portfolio a{
+    color: var(--color-text);
+   }
 
 /* making the all apps container a flex container */
    .all-apps{
@@ -113,10 +126,14 @@
         margin: 30px;
    }
 /* making the first webapp larger than the other four, takes up one third of the all apps container */
-
+   .all-apps{
+    margin: auto;
+    width: 80%;
+    
+   }
     .first-app{
         flex: 2 1 0;
-        width: 33%;
+    
         height: auto;
         border-radius: 4%;
         
@@ -125,7 +142,7 @@
     .app {
         display: flex;
         flex-wrap: wrap;
-        width: 68%;
+        width: 67%;
         height: auto;
 
     }
@@ -152,6 +169,12 @@
     .other img{
         width: 100%;
     } 
+
+    #contact h2 {
+        padding-top:2%;
+        color:var(--color-header)
+
+    }
 /* creating buttons for my contact info */
 /* turning the buttons container into a flext container  */
     .buttons {
@@ -163,31 +186,38 @@
     }
 
 /*setting up the styling of the buttons and creating a fade out effect*/
-   button{
+   .button{
     aspect-ratio:3/1 ;
     width: 20%;
     margin-bottom: 5%;
+    
     border:solid var(--color-button) 5px;
     border-radius: 5%;
+    
     background: var(--color-background);
-    transition:background .7s ease-out,color .7s ease-out, border .7s ease-out;
+    transition:background .7s ease-out, color .7s ease-out, border .7s ease-out;
+    
     font-family: var(--font-button);
+    
    
    }
-   button a{
+   a.button{
+    display: block;
     color:var(--color-button);
+    padding-top:2%; 
+    
+    
    }
 
 /* styling for when user hovers over the button */
-    button:hover {
+    .button:hover {
         background: var(--color-button);
         color: var(--color-background);
         border: none;
+       
+
     }
 
-    button a:hover{
-        color: var(--color-background);
-    }
 
     
    /*screen size adjustments   */
@@ -218,6 +248,7 @@
         .other{
             width:50%;
         }
+       
         }
 
     @media screen and (max-width: 768px){
@@ -229,9 +260,11 @@
         }
         /* changing the font size to look right on a smaller screen  */
         h2{
-            font-size: 100%;
+            font-size: 150%;
         }
-        
+         a{
+            font-size: medium;
+         }
 
       /* all apps will now take up their own row instead of sharing  */
         .app{
@@ -242,6 +275,10 @@
             }
         .other{
             width:100%;
+        }
+        .buttons{
+          flex-direction: column;
+          align-content: center;
         }
         }
 
