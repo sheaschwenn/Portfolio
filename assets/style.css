@@ -1,44 +1,37 @@
-/* Aesthetic: "that girl" 
-    colors: deep green, light green, white, burnt orange, brown. blue/purple
-    or 
-    colors: light green, pink, white, orange
-    fonts: */
+/*creating CSS variables for colors and fonts */
 :root{
-    --color-background:rgb(255, 251, 238);
-    --color-header: #5a4911;
-    --color-text: #a59f2a;
-    /* rgb(116, 59, 18); */
-    --color-button: #5a4911;
-    --font-h1: "Roboto Slab";
-    --font-h2:"Roboto Slab";
-    --font-body:sans-serif;
-    --font-button:"Roboto";
+     --color-background:rgb(255, 251, 238);
+    --color-header:#593202 ; 
+    --color-button: #659FA6;
+    --about-header:#a1c116;
 
+    --color-text:#a1c116 ;
+
+    --contact-section:#659FA6;
+   
+    
+     
+    --font-h1: "Roboto Slab, serif";
+    --font-h2:"Roboto Slab,serif";
+    --font-body:"Roboto";
+    --font-button:"Roboto";
 }
+
+
     body{
-        /* display:flex;
-        background-image: linear-gradient(var(--primary) ,var(--secondary));
-       /* potential for a gradient here  */
-        /* flex-direction: column; */ 
-        /* background:#686e24;*/
-        /* background: radial-gradient(circle, cornsilk 0%, white 100%);  */
-        /* background: rgb(238,174,202);*/
-        /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
-        /* background: rgb(238,174,202);
-        background: radial-gradient(circle, #B8860B 0%, white 100%); */
         background:var(--color-background);
     }
-/* turning the header into a flex container and elements have space between */
+/* turning the header into a flex container and elements have space around */
+/* bringing the header down from the top a little */
     header{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-end;
         margin-top: 4%;
-
-        
     }
-
+    /* general styling for all of my text  */
+    
     h1{
         font-family: var(--font-h1);
         font-size: 350%;
@@ -48,62 +41,70 @@
         font-family: var(--font-h2);
         text-align: center;
         font-size: 250%;
-        color:var(--color-text)
-
+        color:var(--color-header)
     }
     h3{
         font-family: var(--font-h2);
     }
+    
     p{
+    
         color: var(--color-header);
+        font-family: var(--font-body);
+        font-size: large;
+        line-height: 200%; 
+    }
+
+    a{
+        text-decoration: none;
+        font-size: large;
     }
     
 /* choosing how much of the header the nav bar takes up spacing */
     nav{
         width: 30%;
-      
-
     }
     /* turning the ul into a flex container so that the li items can become flex items  */
     ul {
-        display: flex;
-        
-        
+        display: flex;  
     }
     /* splitting up ul evenly between each li item  */
     li{
         width: 33%;
         text-align: center;
+        align-self: baseline;
        }
    
     
-    /* takes away the lines from under the any anchor tag elements */
-    a{
-        text-decoration: none;
+    /* specific styling for the anchor tag text in the header */
+    header a{
         color: var(--color-button);
         font-family:var(--font-button) ;
         font-size: x-large;
-        
-        
+        font-weight: 500;  
         
     }
-/* whenever user is hovering over a link it will go bold */
-    a:hover{
+/* whenever user is hovering over a link it will go bold and the font will get bigger  */
+   header a:hover{
         font-weight: bolder;
-        
+        font-size: xx-large;
     }
+
+   
+
 /* making the section me into a flex contaner, containts about me and profile pic */
-    section.me{
+    .me{
         display: flex; 
-        margin-top: 30px;
+        margin-top: 5%;
     }
-    #profile-pic{
-        
+    /* want profile photo to take up 35% of the page and start a little higher than the about me section */
+    #profile-pic{   
         width: 35%;
-        margin: 15px;
+        margin-top:-5%;
     }
 
     /* putting the about me to the right of profile picture */
+    /* adding styling to the about me to position it where I want  */
     #about{
         float: right;
         display: inline;
@@ -111,42 +112,55 @@
         margin-top: 5%;
         width:60%;
         padding-left: 10%;
-        padding-right:10%;
-    } 
+        padding-right:10%;  
+    }
+    /* specific styling for the about me header  */
+    #about h2{
+        color: var(--about-header);
+        margin-bottom: 5%;
+    }
+ 
+ 
+    /* adding specific styling for the anchor tags in the portfolio section */
    #portfolio a{
     color: var(--color-text);
+    font-family:var(--font-button) ;
+    
    }
-
+   /* hover effect to italize anchor text when user hovers over the image */
+   #portfolio a:hover {
+    font-style: italic;
+   }
 /* making the all apps container a flex container */
    .all-apps{
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         justify-content: space-between;
-        margin: 30px;
+        margin: auto;
+         width: 80%;
+        
    }
-/* making the first webapp larger than the other four, takes up one third of the all apps container */
-   .all-apps{
-    margin: auto;
-    width: 80%;
-    
-   }
+    /* making the first webapp larger than the other four, takes up one third of the all apps container */
+
+   
     .first-app{
         flex: 2 1 0;
-    
         height: auto;
         border-radius: 4%;
+        width: 33%;
+        
         
     }
-/* mading the app container a flex container so my web apps can flow next to one another, takes up 68% of the all apps conainer width */
+    /* mading the app container a flex container so my web apps can flow next to one another, takes up 68% of the all apps conainer width */
     .app {
         display: flex;
         flex-wrap: wrap;
-        width: 67%;
+        width: 68%;
         height: auto;
 
     }
-/* sets the styling of the images with class app  */
+    /* sets the styling of the images with class app  */
     .app img{
         flex: 1 1 0;
         max-width:100% ; 
@@ -154,7 +168,7 @@
         border-radius: 10%; 
         padding: 5px;
     }
-/* width of the app section with class side  */
+    /* width of the app section with class side  */
     .side{
         width: 50%;
 
@@ -162,21 +176,22 @@
     .side img{
         width: 100%;
     }
-/* sets width of the app section with class other */
+    /* sets width of the app section with class other */
     .other{
         width: 50%;
     }
     .other img{
         width: 100%;
     } 
-
+    /* setting styling for header of contact h2 */
+  
+  
     #contact h2 {
         padding-top:2%;
-        color:var(--color-header)
-
+        color: var(--color-header);
     }
-/* creating buttons for my contact info */
-/* turning the buttons container into a flext container  */
+    /* creating buttons for my contact info */
+    /* turning the buttons container into a flext container  */
     .buttons {
         display: flex;
         justify-content: space-around;
@@ -185,41 +200,46 @@
         text-align: center;
     }
 
-/*setting up the styling of the buttons and creating a fade out effect*/
+    /*setting up the styling of the buttons and creating a fade out effect*/
    .button{
     aspect-ratio:3/1 ;
     width: 20%;
     margin-bottom: 5%;
     
-    border:solid var(--color-button) 5px;
+    border:solid var(--contact-section) 5px;
     border-radius: 5%;
     
-    background: var(--color-background);
+    background: var(--color-background); 
+    
     transition:background .7s ease-out, color .7s ease-out, border .7s ease-out;
     
     font-family: var(--font-button);
-    
    
    }
    a.button{
-    display: block;
-    color:var(--color-button);
+    color:var(--contact-section);
     padding-top:2%; 
-    
-    
+   }
+   /* styling for when user hovers over the button */
+   .button:hover {
+    /* background: var(--color-button); */
+    background:var(--contact-section);
+    color: var(--color-background);
+    border: none;
+    font-weight: bolder;
+    }
+   footer{
+    background: var(--color-header);
+    color:var(--color-background);
+    text-align: center;
+    padding: 1%;
+    font-family: var(--font-body);
+    font-size: medium;
+    min-width: 100%;
    }
 
-/* styling for when user hovers over the button */
-    .button:hover {
-        background: var(--color-button);
-        color: var(--color-background);
-        border: none;
-       
-
-    }
 
 
-    
    /*screen size adjustments   */
     @media screen and (max-width:992px) {
         /* for medium devices */
@@ -232,6 +252,16 @@
         }
         ul{
             justify-content: space-evenly;
+        }
+
+        /* shift the about me section up  */
+        #about{
+            margin-top: 0%;
+            
+        }
+        /* removing the margin below the about me heading so that the text will be closer to the heading */
+        #about h2{
+            margin-bottom: 0%;
         }
 
         /* first app and next four will split the screen evenly  */
@@ -253,18 +283,40 @@
 
     @media screen and (max-width: 768px){
         /* small devices */
-        /* each app will take up its own row */
-        /* change the header font size to fit */
+        
+        /* changing the font sizes to look right on a smaller screen  */
         h1{
             font-size: 200%;
         }
-        /* changing the font size to look right on a smaller screen  */
+        
         h2{
             font-size: 150%;
         }
          a{
             font-size: medium;
          }
+         p{
+            font-size: small;
+         }
+
+         /* about me will now go below profile photo */
+         .me{
+            flex-direction: column;
+            margin-bottom:5%;
+            
+        }
+        /* moving profile photo to the middle of the page and removing margins so that things will fit in screen better */
+         #profile-pic{   
+            width: 50%;
+            margin: 0;
+            align-self: center;
+        }
+        /* about me will now take up the whole width of the screen  */
+        /* margin is for spacing to look better */
+        #about{
+            width: 100%;
+            margin-top: 5%;
+        }
 
       /* all apps will now take up their own row instead of sharing  */
         .app{
@@ -276,10 +328,17 @@
         .other{
             width:100%;
         }
+
+        /* buttons will now go into a column instead of in a row */
         .buttons{
           flex-direction: column;
           align-content: center;
         }
+        /* changing the font to be smaller in the footer so it will fit correctly */
+        footer{
+            
+            font-size: small;
+           }
         }
 
    
