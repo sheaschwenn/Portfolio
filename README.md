@@ -18,7 +18,7 @@ My portfolio is a place where potential employers can view my favorite work samp
 Outside of an interview my portfolio is another space for potential employers to learn more about me and my aesthetic. 
 
 
-![Site Langing Page](images\portfolio-webpage.gif)
+![Site Langing Page](/images/portfolio-webpage.gif)
 
 
 ## Table of Contents 
